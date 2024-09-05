@@ -10,7 +10,7 @@ Repositorio correspondiente al curso de Python ofensivo de parte de la agrupaci�
 ("El club de la pelea de Hackers", suena a Mr Robot + Fight Club ¿verdad?, el mejor nombre hacker en la vida,
 somos la envidia después de Anonymous y Fsociety)
 
-#Formato de entrega:
+Formato de entrega:
 La entrega de las tareas se realizará por medio de github. Tendrás que crear un repositorio privado y
 agregarme con el siguiente correo: erick_sonico@ciencias.unam.mx.
 
