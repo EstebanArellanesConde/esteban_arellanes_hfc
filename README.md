@@ -1,5 +1,5 @@
 # HFC_ /PROGRAMACIÓN CON PYTHON
-Arellanes Conde Esteban [Xx-B4NT3-xX]
+Arellanes Conde Esteban [B4NT3]
 
 # Instructores:
 Fernando Marcos Parra Arroyo y
