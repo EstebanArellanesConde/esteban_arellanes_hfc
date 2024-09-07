@@ -1,0 +1,17 @@
+
+    Informe Generado: 2024-09-07 01:49:34
+    Hora de Ejecución: 2024-09-07 01:49:35
+    MD5 del archivo XML: c371cc77dd2e470032a694fe9ffc4a75
+    SHA1 del archivo XML: cd48797e72c3b7cf549789a7fbfc7e493542a9fd
+    Cantidad de hosts prendidos: 4826
+    Cantidad de hosts apagados: 60687
+    Cantidad de hosts con puerto 22 abierto: 4826
+    Cantidad de hosts con puerto 53 abierto: 4826
+    Cantidad de hosts con puerto 80 abierto: 4826
+    Cantidad de hosts con puerto 443 abierto: 4826
+    Cantidad de hosts que tienen nombre de dominio: 12468
+    Servidores HTTP usados: Unknown
+    Cuántos usan Apache: 0
+    Cuántos honeypots (Dionaea): 0
+    Cuántos usan Nginx: 0
+    
