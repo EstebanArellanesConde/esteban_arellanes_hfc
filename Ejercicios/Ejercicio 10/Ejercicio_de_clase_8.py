@@ -40,8 +40,11 @@ def leer_usuarios():
     if os.path.exists('Usuarios.txt'):
         with open('Usuarios.txt', 'r') as file:
             for line in file:
-                name, email, password = line.strip().split(',')
-                usuarios[email] = (name, password)
+                try:
+                    name, email, hashed_password = line.strip().split(',')
+                    usuarios[email] = (name, hashed_password)
+                except ValueError:
+                    print("Formato incorrecto en el archivo de usuarios.")
     return usuarios
 
 def guardar_usuario(usuario):
@@ -58,9 +61,11 @@ def iniciar_sesion():
         if opcion == '1':
             email = input('¿Cuál es tu correo?: ')
             password = input('¿Cuál es tu contraseña?: ')
+            password = hashlib.sha256(password.encode()).hexdigest()
 
             if email in usuarios:
-                usuario = Usuario(*usuarios[email])
+                name, hashed_password = usuarios[email]
+                usuario = Usuario(name, email, hashed_password)
                 if usuario.verificar_password(password):
                     print(f'¡Bienvenido de nuevo, {usuario.name}!')
                     break
@@ -79,9 +84,12 @@ def iniciar_sesion():
             password = input('Ingresa una contraseña: ')
 
             try:
-                usuario = Usuario(name, email, password)
-                guardar_usuario(usuario)
-                print("Usuario registrado con éxito.")
+                if Usuario.validar_password(password):
+                    usuario = Usuario(name, email, password)
+                    guardar_usuario(usuario)
+                    print("Usuario registrado con éxito.")
+                else:
+                    print("La contraseña no cumple con los requisitos.")
             except PasswordInvalido as e:
                 print(e)
 
@@ -90,9 +98,10 @@ def iniciar_sesion():
             break
 
         else:
-            print("Opción no válida. Por favor, ingresa 0, 1 o 2.")
+            print("Opción no válida. Por favor, ingresa 1, 2 o 3.")
 
 if __name__ == "__main__":
     print('------------¡Bienvenido!------------')
     iniciar_sesion()
+()
 
